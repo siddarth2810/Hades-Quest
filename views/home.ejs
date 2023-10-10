@@ -1,26 +1,20 @@
-
-
 <%- include("partials/header") -%>
 
 
-<div class="container-fluid" style="padding: 0;">
-    <div class="container-fluid" style="background-color: antiquewhite; padding: 0;">
-      <div class="sections-container">
- 
-      
- 
-        <form action="/increaseProgress" method="post">
-            
-        <progress id="progressBar"   value="<%= barValue %>" max="100"></progress>
-        <input type="hidden" name="completedTask" id="completedTask">
-        
-    </form>
-            
-    </div>
- 
-  </div>
- 
-<!-- <div class="container-fluid">
+    <div class="container-fluid" style="padding: 0;">
+        <div class="container-fluid" style="background-color: antiquewhite; padding: 0;">
+            <div class="sections-container">
+                <progress id="progressBar" value="<%= barValue %>" max="100"></progress>
+                <div>
+                    <h1>
+                        <%= levelDisplay %>
+                    </h1>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3" id="academia-tasks" style="background-color: aqua;">
 
@@ -29,56 +23,34 @@
     </div>
 
 </div> -->
-<div class="card">
-    <ul>
-        <li>slay the mythical beast</li>
+        <div class="card">
+            <ul>
+                <li>slay the mythical beast</li>
 
-       <% for(i=0; i<tasks.length; i++){ %>
-            <li> <%= tasks[i] %>
-            
-                <input type="checkbox" class="task-checkbox" data-task="<%= i %>">r
-            </li>
-          
-         
-            <% } %>
-          
-     
-    </ul>
-    <div class="add-task">
-        <form action="" method="post">
-            <input type="text" placeholder="add your task" name="taskTest">
-            <button type="submit">+</button>
-        </form>
-    </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const taskCheckboxes = document.querySelectorAll('.task-checkbox');
-    const completedTaskInput = document.getElementById('completedTask');
-
-    taskCheckboxes.forEach((checkbox) => {
-        checkbox.addEventListener('change', (event) => {
-            if (checkbox.checked) {
-                // Disable the checkbox to prevent further changes
-                checkbox.disabled = true;
-
-                // Get the task identifier from the checkbox's data-task attribute
-                const taskIndex = checkbox.getAttribute('data-task');
-                // Set the value of the completedTask input to the task identifier
-                completedTaskInput.value = taskIndex;
-                // Submit the form to trigger the /increaseProgress route
-                document.querySelector('form').submit();
-            }
-        });
-    });
-});
+                <% for(i=0; i<tasks.length; i++){ %>
+                    <li>
+                        <%= tasks[i] %>
 
 
+                            <form action="/increaseProgress" method="post" id="myForm">
 
-</script>
- 
+                                <button type="submit">done</button>
+                            </form>
 
-<%- include("partials/footer") -%>
+                    </li>
 
 
+                    <% } %>
+
+
+            </ul>
+            <div class="add-task">
+                <form action="" method="post">
+                    <input type="text" placeholder="add your task" name="taskTest">
+                    <button type="text">+</button>
+                </form>
+            </div>
+        </div>
+
+
+        <%- include("partials/footer") -%>
