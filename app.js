@@ -14,11 +14,12 @@ app.use(express.static('public'));
 
 const tasks = []
 let progressValue= 0;
+let levelValue = 0;
 
 
 
 app.get('/', (req, res) => {
-  res.render('home', {tasks: tasks, barValue: progressValue});
+  res.render('home', {tasks: tasks, barValue: progressValue,levelDisplay: levelValue});
  
 });
 
@@ -35,13 +36,18 @@ app.post('/', (req, res) => {
 
 app.post('/increaseProgress', (req, res) => {
 
- if (progressValue > 100) {
+ if (progressValue >= 100) {
+  levelValue += 1;
    progressValue = 0;}
   else {
     progressValue += 10;
   }
+
   
-  res.redirect('/');
+  
+res.redirect('/');
+
+ 
 });
 
 
