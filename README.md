@@ -9,7 +9,7 @@
 - body-parser
 - nodemon
 
-#How to get started
+# How to get started
 - Fork the repo using the command `git clone <repo link>`
 - go the project directory
 - Run `npm i ` to install dependencies
