@@ -10,17 +10,28 @@
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <p class="navbar-brand">DAILY JOURNAL</p>
+        <p class="navbar-brand">HADES QUEST</p>
       </div>
         <ul class="nav navbar-nav navbar-right">
           <!-- 6 -->
-          <li id="home"><a href="/">HOME </a></li>
-          <li id="about"><a href="/about">ABOUT US</a></li>
-          <li id="contact"><a href="/contact">CONTACT US </a></li>
+         
+          <li id="about"><a href="/about">KNOW THE GODS</a></li>
+         
         </ul>
     </div>
   </nav>
+  <div class="container-fluid" style="background-color: antiquewhite; padding: 0;">
+    <div class="sections-container">
+        <progress id="progressBar" value="<%= barValue %>" max="100"></progress>
+        <progress id="progressBar2" value="<%= barValue2 %>" max="100"></progress>
+        <div>
+            <h1>
+                <%= levelDisplay %>
+            </h1>
+        </div>
+    </div>
 
+</div>
   <body>
   
     
