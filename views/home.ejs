@@ -1,73 +1,43 @@
 <%- include("partials/header") -%>
 
-        <div class="card">
-            <ul>
-                <li>slay the mythical beast</li>
-                <div>
-                    <% for(i=0; i<tasks.length; i++){ %>
-                        <li id="task<%= i %>">
-                            <%= tasks[i] %>
-                            <form action="/increaseProgress" method="post" name="removeDiv">
-                                    <button type="submit" >done</button>                           
-                                </form>
-                        </li>
-                        <% } %>
+
+<div class="container-fluid" id="list-section">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <ul>
+                    <li>slay the mythical beast</li>
+                    <div>
+                       <% tasks.forEach(function(task) { %>
+                            <form action="/increaseProgressAndDelete" method="post" >
+                            <li id="task">
+                                <input type="checkbox" name="checkbox" value="<%=task._id%>" onChange="this.form.submit()">
+                                <%= task.name %>
+                               
+                                                                 
+                                    </form>
+                            </li>
+                            <% } )%>
+                    </div>
+                </ul>
+                <div class="add-task">
+                    <form action="/" method="post">
+                        <input type="text" placeholder="newItem" name="newItem">
+                        <button type="text">+</button>
+                    </form>
                 </div>
-            </ul>
-            <div class="add-task">
-                <form action="" method="post">
-                    <input type="text" placeholder="add your task" name="taskTest">
-                    <button type="text">+</button>
-                </form>
             </div>
         </div>
+ 
+        </div>
+    
+    </div>
+</div>
 
-<!-- second card -->
-         <div class="card">
-            <ul>
-                <li>clean the stables</li>
-                <div>
-                    <% for(i=0; i<tasks2.length; i++){ %>
-                        <li id="task2<%= i %>">
-                            <%= tasks2[i] %>
-                            <form action="/increaseProgress2" method="post" name="removeDiv2">
-                                    <button type="submit" >done</button>                           
-                                </form>
-                        </li>
-                        <% } %>
-                </div>
-            </ul>
-            <div class="add-task">
-                <form action="/addTask2" method="post">
-                    <input type="text" placeholder="add your task" name="taskTest2">
-                    <button type="text">+</button>
-                </form>
-            </div>
-        </div> 
+      
 
-        <!-- thrid card -->
 
-        <div class="card">
-            <ul>
-                <li>clean the stables</li>
-                <div>
-                    <% for(i=0; i<tasks3.length; i++){ %>
-                        <li id="task3<%= i %>">
-                            <%= tasks3[i] %>
-                            <form action="/increaseProgress3" method="post" name="removeDiv3">
-                                    <button type="submit" >done</button>                           
-                                </form>
-                        </li>
-                        <% } %>
-                </div>
-            </ul>
-            <div class="add-task">
-                <form action="/addTask3" method="post">
-                    <input type="text" placeholder="add your task" name="taskTest3">
-                    <button type="text">+</button>
-                </form>
-            </div>
-        </div> 
+   
        
     
    

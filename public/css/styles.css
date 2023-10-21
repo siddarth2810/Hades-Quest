@@ -1,3 +1,17 @@
+
+progress {
+    display: block;
+    width: 180px;
+    height: 15px;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -20,6 +34,7 @@
     width: 300px;
     height: 300px;
     border: red 2px solid;
+   
 }
 .add-task{
     display: flex;
