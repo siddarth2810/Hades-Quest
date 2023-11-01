@@ -15,14 +15,19 @@
         <ul class="nav navbar-nav navbar-right">
           <!-- 6 -->
          
-          <li id="about"><a href="/about">KNOW THE GODS</a></li>
+          <li id="about"><a href="#">KNOW THE GODS</a></li>
          
         </ul>
     </div>
   </nav>
   <div class="container-fluid" style="background-color: antiquewhite; padding: 0;">
-    <progress id="progressBar" value="<%= barValue %>" max="100"></progress>    
+    <h1>
+      <%= levelDisplay %>
+    </h1>
 
+    <progress id="progressBar" value="<%= barValue %>" max="100" ></progress>    
+    <progress id="progressBar" value="<%= barValue2 %>" max="100" ></progress>  
+    <progress id="progressBar" value="<%= barValue3 %>" max="100" ></progress> 
 </div>
   <body>
   
