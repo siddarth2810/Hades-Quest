@@ -1,7 +1,9 @@
+
 <%- include("partials/header") -%>
 
 
 <div class="container-fluid" id="list-section">
+   
     <div class="row">
         <div class="col-lg-4">
             <div class="card">
@@ -27,8 +29,66 @@
                     </form>
                 </div>
             </div>
+         
         </div>
- 
+
+        <!-- second todolist -->
+
+        <div class="col-lg-4">
+            <div class="card">
+                <ul>
+                    <li>slay the second mythical beast</li>
+                    <div>
+                       <% tasks2.forEach(function(task2) { %>
+                            <form action="/increaseProgressAndDelete2" method="post" >
+                            <li id="task">
+                                <input type="checkbox" name="checkbox2" value="<%=task2._id%>" onChange="this.form.submit()">
+                                <%= task2.name %>
+                               
+                                                                 
+                                    </form>
+                            </li>
+                            <% } )%>
+                    </div>
+                </ul>
+                <div class="add-task">
+                    <form action="/secondList" method="post">
+                        <input type="text" placeholder="newItem2" name="newItem2">
+                        <button type="text">+</button>
+                    </form>
+                  
+                </div>
+            </div>
+        </div>
+
+        <!-- third todolist -->
+        <div class="col-lg-4">
+            <div class="card">
+                <ul>
+                    <li>slay the second mythical beast</li>
+                    <div>
+                       <% tasks3.forEach(function(task3) { %>
+                            <form action="/increaseProgressAndDelete3" method="post" >
+                            <li id="task">
+                                <input type="checkbox" name="checkbox3" value="<%=task3._id%>" onChange="this.form.submit()">
+                                <%= task3.name %>
+                               
+                                                                 
+                                    </form>
+                            </li>
+                            <% } )%>
+                    </div>
+                </ul>
+                <div class="add-task">
+                    <form action="/thirdList" method="post">
+                        <input type="text" placeholder="newItem3" name="newItem3">
+                        <button type="text">+</button>
+                    </form>
+                  
+                </div>
+            </div>
+        </div>
+
         </div>
     
     </div>
