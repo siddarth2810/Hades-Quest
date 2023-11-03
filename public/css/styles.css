@@ -1,60 +1,201 @@
+body {
+  background-image: url(/img/background.webp) !important;
+}
 
-progress {
-    display: block;
-    width: 180px;
-    height: 15px;
-    text-align: center;
-    color: white;
-    margin: 10px;
-    
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+.navbar {
+  background-image: url(/img/background.webp) !important;
+
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-family: "Caesar Dressing", cursive;
+}
+
+.navbar li a {
+    margin: 10px 45px 0 0 ;
+    font-size: 16px;
+    color: #fff !important;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    margin: 10px 0px 5px 20px !important;
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover {
+  color: #770b09 !important;
+}
+
+.container {
+  width: 100%;
 }
 
 .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-.navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-}
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
+  padding-top: 55px;
+  padding-bottom: 100px;
 }
 
-
-.card {
-    width: 300px;
-    height: 300px;
-    border: red 2px solid;
-   
-}
-.add-task{
-    display: flex;
-
-
+/* level indicator */
+#level {
+  margin: 5px 5px 5px 15px;
+  padding-top: 2px;
+  font-family: "Caesar Dressing", cursive;
+  display: flex;
 }
 
-
-
-.footer {
-	position: absolute;
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #1abc9c;
+/* Hero Image*/
+.image {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  left: 35px;
+  object-fit: cover;
 }
 
-.footer p {
-	margin-top: 25px;
-	font-size: 12px;
+/* box that contains progress bars*/
+.rectangle-3 {
+  position: absolute;
+  width: 235px;
+  height: 150px;
+  top: 100px;
+  left: 190px;
+  background-color: #000000e0;
   color: #fff;
+}
+
+/* progress bars */
+
+progress {
+  display: flex;
+  width: 180px;
+  height: 17px;
+  text-align: center;
+  margin: 15px;
+  border: none;
+  background-color: #fff;
+}
+
+#fitnessBar {
+  display: inline;
+}
+
+#academicsBar {
+  display: inline;
+}
+
+#selfcareBar {
+  display: inline;
+}
+
+#fitnessBar > progress::-moz-progress-bar {
+  background: #c81d1d;
+}
+
+#academicsBar > progress::-moz-progress-bar {
+  background: #404881;
+}
+
+#selfcareBar > progress::-moz-progress-bar {
+  background: #f16aa5;
+}
+
+/* progress bar icons */
+.athenaLogo {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 46px;
+  left: 201px;
+}
+
+.aresLogo {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 73px;
+  left: 195px;
+}
+
+.aphroditeLogo {
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  top: 112px;
+  left: 200px;
+}
+
+/* todolist box*/
+.card {
+  width: 360px;
+  max-height: 500px;
+  background-color: #040303;
+  list-style-type: none;
+  text-transform: lowercase;
+  margin: 22px;
+}
+
+.card li {
+  padding: 5px 4px 3px 15px;
+  margin: 5px;
+  font-family: "Caesar Dressing", cursive;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* list icons */
+
+.list-icon-holder {
+  min-height: 53px;
+}
+
+.list-athena-logo {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  padding: 4px 4px 0px 5px;
+}
+
+.list-ares-logo {
+  width: 52px;
+  height: 52px;
+
+  margin: 2px 2px 0px 5px;
+}
+
+.list-aphrodite-logo {
+  width: 37px;
+  height: 33px;
+  margin: 5px 3px 0px 5px;
+  padding-top: 2px;
+}
+
+.add-task {
+  display: flex;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 30px;
+  top: 10px;
+  border: 1px solid #fff;
+  background: transparent;
+  font-family: "Caesar Dressing", cursive;
+  color: #fff;
+  margin: 7px 7px 15px 15px;
+  width: 190px;
+}
+
+button[type="text"] {
+  height: 31px;
+  width: 30px;
+  border-radius: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
 }

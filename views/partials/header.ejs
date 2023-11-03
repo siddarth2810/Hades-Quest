@@ -3,32 +3,73 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Daily Journal</title>
+  <title>Hades Quest</title>
   <meta charset="utf-8">
+
+ <!-- link to google fonts  -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/styles.css">
+
+  </head>
+
+  <body>
+
+
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
         <p class="navbar-brand">HADES QUEST</p>
       </div>
-        <ul class="nav navbar-nav navbar-right">
-          <!-- 6 -->
-         
-          <li id="about"><a href="#">KNOW THE GODS</a></li>
+        <ul class="nav navbar-nav navbar-right"> 
+          <li id="about"><a href="./about.html">KNOW ABOUT THE GAME</a></li>
          
         </ul>
     </div>
   </nav>
-  <div class="container-fluid" style="background-color: antiquewhite; padding: 0;">
-    <h1>
-      <%= levelDisplay %>
-    </h1>
 
-    <progress id="progressBar" value="<%= barValue %>" max="100" ></progress>    
-    <progress id="progressBar" value="<%= barValue2 %>" max="100" ></progress>  
-    <progress id="progressBar" value="<%= barValue3 %>" max="100" ></progress> 
+
+
+
+
+
+
+
+<img class="image" src="img/image-2.png" /> 
+  
+<div class="container-fluid">
+  <div class="rectangle-3" >
+    <h3 id="level">
+      LEVEL: <%= levelDisplay %>
+    </h3>
+
+    <div id="academicsBar" class="rectangle-4">
+      <img class="img athenaLogo" src="img/imageedit-5-3670121336-1.png" />
+      <progress  value="<%= barValue %>" max="100" ></progress>  
+
+
+    </div>
+         
+        <div id="fitnessBar" class="rectangle-5">
+          <progress  value="<%= barValue2 %>" max="100" ></progress>  
+          <img class="img aresLogo" src="img/image-4.png" />
+        </div> 
+       <div id="selfcareBar" class="rectangle-6">
+        <progress value="<%= barValue3 %>" max="100" ></progress> 
+        <img class="img aphroditeLogo" src="img/imageedit-7-6179518604-1.png" />
+    
+       </div>
+  </div>
 </div>
-  <body>
+  
+
+
+
+
+ 
   
     
