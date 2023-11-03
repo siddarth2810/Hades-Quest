@@ -58,15 +58,15 @@ const thirdProgress = mongoose.model("thirdProgress", progressSchema);
 
 
 const item1 = new Item({
-  name: "Minimum of one task is required",
+  name: "Atleast one challenge is required",
 });
 
 const item2 = new secondItem({
-  name: "task in the second list",
+  name: "fitness challenges goes here",
 });
 
 const item3 = new thirdItem({
-  name: "task in the third list",
+  name: "self-care challenges goes here",
 });
 
 
@@ -111,7 +111,7 @@ app.get("/", async (req, res) => {
     async function insertItems() {
       try {
         await Item.insertMany(item1);
-        console.log("Successfully inserted all items to collections");
+      
       } catch (err) {
         console.log(err);
       }
@@ -124,7 +124,7 @@ app.get("/", async (req, res) => {
       async function insertItems2() {
         try {
           await secondItem.insertMany(item2);
-          console.log("Successfully inserted all items to collections of second todolist");
+         
         } catch (err) {
           console.log(err);
         }
@@ -137,7 +137,7 @@ app.get("/", async (req, res) => {
       async function insertItems3() {
         try {
           await thirdItem.insertMany(item3);
-          console.log("Successfully inserted all items to collections of third todolist");
+        
         } catch (err) {
           console.log(err);
         }
