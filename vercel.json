@@ -1,15 +1,11 @@
 {
     "version": 2,
+    "name": "Hades Quest",
     "builds": [
-        {
-            "src": "app.js",
-            "use": "@now/node"
-        }
+      { "src": "./app.js", "use": "@vercel/node" }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
+      { "src": "/(.*)", "dest": "app.js" }
     ]
-}
+   }
+

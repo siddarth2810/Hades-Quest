@@ -4,9 +4,11 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const { title } = require("process");
 const _ = require("lodash");
+const path = require("path");
 
 const app = express();
 
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -15,6 +17,7 @@ app.use(express.static("public"));
 const mongoose = require("mongoose");
 const uri = ""
 const { type } = require("os");
+const path = require("path");
 
 mongoose.connect("mongodb://localhost:27017/HadesDB", {
   useNewUrlParser: true,
