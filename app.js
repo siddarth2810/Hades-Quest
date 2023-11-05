@@ -47,7 +47,7 @@ const levelSchema = {
 
 
 //create progress model and save it to the database
-const Progress = mongoose.model("Progress", progressSchema);
+const Progress = mongoose.model("progress", progressSchema);
 const level = mongoose.model("level", levelSchema);
 
 const Item = mongoose.model("Item", itemsSchema);
