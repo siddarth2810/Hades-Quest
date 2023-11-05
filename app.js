@@ -17,7 +17,7 @@ app.use(express.static("public"));
 const mongoose = require("mongoose");
 const uri = ""
 const { type } = require("os");
-const path = require("path");
+
 
 mongoose.connect("mongodb://localhost:27017/HadesDB", {
   useNewUrlParser: true,
