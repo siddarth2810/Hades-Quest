@@ -16,7 +16,7 @@ const mongoose = require("mongoose");
 const uri = ""
 const { type } = require("os");
 
-mongoose.connect("mongodb+srv://siddarthg0910:OiHBC6E3jyEDCJPU@cluster0.yaryneb.mongodb.net/HadesDB", {
+mongoose.connect("mongodb://localhost:27017/HadesDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -298,6 +298,6 @@ app.post("/increaseProgressAndDelete2", async (req, res) => {
   );
 
 //listen to port 8001
-app.listen(process.env.PORT || 8001, () => {
+app.listen(8001, () => {
   console.log("Server is running on port 8001");
 });

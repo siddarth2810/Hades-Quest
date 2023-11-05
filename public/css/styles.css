@@ -1,6 +1,8 @@
 body {
   background-image: url(/img/background.webp) !important;
   background-size: cover;
+
+  
 }
 
 .navbar {
@@ -160,7 +162,7 @@ progress {
 }
 
 .list-athena-logo {
-  width: 45px;
+  width: 50px;
   height: 40px;
   margin: 2px;
   padding: 4px 4px 0px 5px;
