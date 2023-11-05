@@ -19,7 +19,7 @@ const uri = ""
 const { type } = require("os");
 
 
-mongoose.connect("mongodb://localhost:27017/HadesDB", {
+mongoose.connect("mongodb+srv://siddarthg0910:OiHBC6E3jyEDCJPU@cluster0.yaryneb.mongodb.net/HadesDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
