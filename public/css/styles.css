@@ -1,5 +1,8 @@
 body {
   background-image: url(/img/background.webp) !important;
+  background-size: cover;
+
+  
 }
 
 .navbar {
@@ -15,15 +18,20 @@ body {
 }
 
 .navbar li a {
-    margin: 10px 45px 0 0 ;
-    font-size: 16px;
-    color: #fff !important;
+  margin: 10px 45px 0 0;
+  font-size: 16px;
+  color: #fff !important;
 }
 
 .navbar-brand {
-    font-size: 30px;
-    margin: 10px 0px 5px 20px !important;
-    color: #fff !important;
+  font-size: 30px;
+  margin: 10px 0px 5px 20px !important;
+  color: #fff !important;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: #fff !important;
 }
 
 .navbar-nav li a:hover {
@@ -154,7 +162,7 @@ progress {
 }
 
 .list-athena-logo {
-  width: 40px;
+  width: 50px;
   height: 40px;
   margin: 2px;
   padding: 4px 4px 0px 5px;
@@ -198,4 +206,69 @@ button[type="text"] {
   background-color: #000;
   color: #fff;
   border: 1px solid #fff;
+}
+
+/* about page */
+
+#gameInfo {
+  margin: 15px;
+  padding: 10px;
+  background-color: #0000004e;
+  height: 100vh;
+}
+
+#gameInfo p {
+  color: #fff;
+  font-family: "Caesar Dressing", cursive;
+  letter-spacing: 2px;
+  line-height: 20px;
+  padding: 10px 30px;
+}
+
+#infoHeading {
+  font-size: 17px;
+  font-family: "Caesar Dressing", cursive;
+  color: #fff;
+  margin: 30px 0px 10px 30px;
+}
+
+#downArrow {
+  position: absolute;
+  margin: 15px 0 0 0px;
+}
+
+#first {
+  background: url("../img/athena.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 200vh;
+  color: #ffeacf;
+  display: flex;
+}
+
+#second {
+  background: url("../img/ares.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 200vh;
+  color: #ffeacf;
+  display: flex;
+}
+
+#third {
+  background: url("../img/aphro.webp") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 200vh;
+  color: #ffeacf;
+  display: flex;
 }

@@ -3,15 +3,16 @@
 
 
     <div class="container-fluid" id="list-section">
-    
+
         <div class="row">
             <div class="col-lg-4">
-              
+
+                <!-- athena todolist -->
                 <div class="card" id="athenaCard">
-                    <div class="list-icon-holder"  style="background-color: #f6b85b;">
-                   
+                    <div class="list-icon-holder" style="background-color: #f6b85b;">
+
                         <img class="list-athena-logo" src="img/imageedit-5-3670121336-2.png" />
-                        </div>
+                    </div>
                     <div>
                         <% tasks.forEach(function(task) { %>
                             <form action="/increaseProgressAndDelete" method="post">
@@ -34,14 +35,14 @@
 
             </div>
 
-            <!-- second todolist -->
+            <!-- ares todolist -->
 
             <div class="col-lg-4">
                 <div class="card">
-                    <div  class="list-icon-holder" style="background-color: #ee4b4f;">
-                   
+                    <div class="list-icon-holder" style="background-color: #ee4b4f;">
+
                         <img class="list-ares-logo" src="img/image-6.png" />
-                        </div>
+                    </div>
                     <div>
                         <% tasks2.forEach(function(task2) { %>
                             <form action="/increaseProgressAndDelete2" method="post">
@@ -64,13 +65,13 @@
                 </div>
             </div>
 
-            <!-- third todolist -->
+            <!-- aphrodite todolist -->
             <div class="col-lg-4">
-                <div class="card" >
+                <div class="card">
                     <div class="list-icon-holder" style="background-color: #e9669f;">
-                     
-                        <img class="list-aphrodite-logo" src="img/imageedit-7-6179518604-2.png"  />
-                        </div>
+
+                        <img class="list-aphrodite-logo" src="img/imageedit-7-6179518604-2.png" />
+                    </div>
                     <div>
                         <% tasks3.forEach(function(task3) { %>
                             <form action="/increaseProgressAndDelete3" method="post">

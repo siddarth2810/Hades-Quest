@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const mongoose = require("mongoose");
+const uri = ""
 const { type } = require("os");
 
 mongoose.connect("mongodb://localhost:27017/HadesDB", {
@@ -99,6 +100,12 @@ let currentProgressValue2;
 let currentProgress3;
 let currentProgressValue3;
 
+
+//render the about page
+app.get("/about", (req, res) => {
+  res.render("partials/about.ejs");
+});
+
 //render the home page and check whether the database is empty or not
 app.get("/", async (req, res) => {
   const foundItems = await Item.find({});
@@ -158,9 +165,7 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.get("/gods-page", (req, res) => {
-  res.render("gods-page");
-})
+
 
 //post the task into the database when / route is called
 app.post("/", async (req, res) => {
@@ -199,7 +204,7 @@ app.post("/thirdList", async (req, res) => {
 
   res.redirect("/");
 }
-);
+); 
 
 //delete items when /increaseProgressAndDelete route is called and increase the progress bar
 
