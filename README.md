@@ -1,4 +1,4 @@
-# Hades-Quest - A gamified todo-list to make your tasks fun !
+# Hades-Quest - A gamified todo-list to make completing your tasks more FUN !
 
 ## Introduction
 Inspired by the game **HADES**, Hades-Quest is a gamified to-do list in which three gods control various task categories: Ares helps with fitness, Aphrodite with self-care, and Athena with academic or professional matters. To escape the Underworld, our hero must level up. As you do your daily tasks, the bar increases, **but here's the catch:** our hero will only level up if you finish tasks assigned equally by all the gods.
@@ -9,7 +9,7 @@ Inspired by the game **HADES**, Hades-Quest is a gamified to-do list in which th
 - [Installation](#installation)
 - [Why We Built Hades-Quest](#why-we-built-Hades-Quest)
 - [What It Does](#what-it-does)
-- [Tech Stack Used](#tech-stack-used)
+- [Tech Stack](#tech-stack)
 - [Contribution](#contribution)
 - [Code of Conduct](#code-of-conduct)
 
@@ -17,14 +17,14 @@ Inspired by the game **HADES**, Hades-Quest is a gamified to-do list in which th
 This environment is fully on your computer and requires MongoDB to be installed and set up.
 - [MongoDb](https://www.mongodb.com/)
 
-## 🛠️ Installation
+## Installation
 1. Clone the repository by running `git clone https://github.com/siddarth2810/Hades-Quest.git`
 2. Run `cd Hades-Quest` to change the working directory
 3. Run `npm i` or `npm install` to install all dependencies
 4. Run `nodemon app.js` to start the application
 5. Visit [http://localhost:8001](http://localhost:8001) to view the application
 
-## Why We Built ?
+## Why We Built Hades Quest?
 The main motive of **Hades-Quest** is to gamify your todo-list experience, making it more engaging and fun than traditional todo-lists and enchance your productivity.
 
 ## What It Does
