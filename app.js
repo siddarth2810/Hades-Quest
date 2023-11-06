@@ -19,10 +19,16 @@ const uri = ""
 const { type } = require("os");
 
 
-await mongoose.connect("mongodb+srv://siddarthg0910:OiHBC6E3jyEDCJPU@cluster0.yaryneb.mongodb.net/HadesDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+async function connectDB() {
+  let conn = await mongoose.connect( "mongodb+srv://siddarthg0910:OiHBC6E3jyEDCJPU@cluster0.yaryneb.mongodb.net/HadesDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  return conn;
+}
+
+
+
 
 
 //data for todolist1
@@ -111,6 +117,7 @@ app.get("/about", (req, res) => {
 
 //render the home page and check whether the database is empty or not
 app.get("/", async (req, res) => {
+  await connectDB();
   const foundItems = await Item.find({});
   const secondFoundItems = await secondItem.find({});
   const thirdFoundItems = await thirdItem.find({});
