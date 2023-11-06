@@ -15,14 +15,15 @@ Inspired by the game **HADES**, Hades-Quest is a gamified to-do list in which th
 
 ## Prerequisites
 This environment is fully on your computer and requires MongoDB to be installed and set up.
-- [MongoDb](https://www.mongodb.com/)
+- [MongoDB](https://www.mongodb.com/)
 
 ## Installation
-1. Clone the repository by running `git clone https://github.com/siddarth2810/Hades-Quest.git`
-2. Run `cd Hades-Quest` to change the working directory
-3. Run `npm i` or `npm install` to install all dependencies
-4. Run `nodemon app.js` to start the application
-5. Visit [http://localhost:8001](http://localhost:8001) to view the application
+1. Make sure you have the above prerequisites installed in your computer.
+2. Clone the repository by running `git clone https://github.com/siddarth2810/Hades-Quest.git`
+3. Run `cd Hades-Quest` to change the working directory
+4. Run `npm i` or `npm install` to install all dependencies
+5. Run `nodemon app.js` to start the application
+6. Visit [http://localhost:8001](http://localhost:8001) to view the application
 
 ## Why We Built Hades Quest?
 The main motive of **Hades-Quest** is to gamify your todo-list experience, making it more engaging and fun than traditional todo-lists and enchance your productivity.
@@ -36,8 +37,8 @@ The main motive of **Hades-Quest** is to gamify your todo-list experience, makin
 ## Tech Stack 
 Hades Quest uses the following technologies:
 -  [EJS](https://ejs.co/#promo) - a simple templating language that lets you generate HTML markup with plain JavaScript.
--  [Express.js](https://expressjs.com/)
 -  [MongoDB](https://www.mongodb.com/) - a NOSQL database
+-  [Express.js](https://expressjs.com/)
 
 ## Contribution
 
