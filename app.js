@@ -20,7 +20,7 @@ const { type } = require("os");
 
 
 async function connectDB() {
-  let conn = await mongoose.connect( "mongodb+srv://siddarthg0910:OiHBC6E3jyEDCJPU@cluster0.yaryneb.mongodb.net/HadesDB", {
+  let conn = await mongoose.connect( "mongodb://localhost:27017/HadesDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
