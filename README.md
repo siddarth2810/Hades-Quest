@@ -35,9 +35,9 @@ The main motive of **Hades-Quest** is to gamify your todo-list experience, makin
 
 ## Tech Stack 
 Hades Quest uses the following technologies:
--  EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.[EJS](https://ejs.co/#promo)
--  Express.js for routing [Express.js](https://expressjs.com/)
--  MongoDB-a NOSQL database [MongoDb](https://www.mongodb.com/)
+-  [EJS](https://ejs.co/#promo) - a simple templating language that lets you generate HTML markup with plain JavaScript.
+-  [Express.js](https://expressjs.com/)
+-  [MongoDB](https://www.mongodb.com/) - a NOSQL database
 
 ## Contribution
 
