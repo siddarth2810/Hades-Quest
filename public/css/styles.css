@@ -6,8 +6,8 @@ body {
 }
 
 .navbar {
-  background-image: url(/img/background.webp) !important;
-
+  background-image: url(../img/background.webp) !important;
+  background-size: cover;
   padding: 0;
   border: 0;
   border-radius: 0;
