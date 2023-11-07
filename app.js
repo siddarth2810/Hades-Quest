@@ -5,6 +5,7 @@ const ejs = require("ejs");
 const { title } = require("process");
 const _ = require("lodash");
 const path = require("path");
+require('dotenv').config(); //to use .env file
 
 const app = express();
 
@@ -17,12 +18,24 @@ app.use(express.static("public"));
 const mongoose = require("mongoose");
 const uri = ""
 const { type } = require("os");
-const path = require("path");
+const { connect } = require("http2");
 
-mongoose.connect("mongodb://localhost:27017/HadesDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+//connect to mongoose local HadesDB database
+const mongodbURI = process.env.MONGODB_URI; 
+
+async function connectDB() {
+  await mongoose.connect( mongodbURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 50000,
+  });
+  
+}
+connectDB();
+
+
+
+
 
 
 //data for todolist1
@@ -111,6 +124,7 @@ app.get("/about", (req, res) => {
 
 //render the home page and check whether the database is empty or not
 app.get("/", async (req, res) => {
+ 
   const foundItems = await Item.find({});
   const secondFoundItems = await secondItem.find({});
   const thirdFoundItems = await thirdItem.find({});
