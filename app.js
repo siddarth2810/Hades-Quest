@@ -8,16 +8,18 @@ const path = require("path");
 require('dotenv').config(); //to use .env file
 
 const app = express();
+app.use(express.static(__dirname + '/public'));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static("public"));
+
 
 const mongoose = require("mongoose");
 const uri = ""
 const { type } = require("os");
+
 const { connect } = require("http2");
 
 //connect to mongoose local HadesDB database
@@ -60,7 +62,7 @@ const levelSchema = {
 
 
 //create progress model and save it to the database
-const Progress = mongoose.model("Progress", progressSchema);
+const Progress = mongoose.model("progress", progressSchema);
 const level = mongoose.model("level", levelSchema);
 
 const Item = mongoose.model("Item", itemsSchema);
@@ -124,7 +126,7 @@ app.get("/about", (req, res) => {
 
 //render the home page and check whether the database is empty or not
 app.get("/", async (req, res) => {
- 
+
   const foundItems = await Item.find({});
   const secondFoundItems = await secondItem.find({});
   const thirdFoundItems = await thirdItem.find({});
