@@ -3,7 +3,8 @@
 ## Introduction
 Inspired by the game **HADES**, Hades-Quest is a gamified to-do list in which three gods control various task categories: Ares helps with fitness, Aphrodite with self-care, and Athena with academic or professional matters. To escape the Underworld, our hero must level up. As you do your daily tasks, the bar increases, **but here's the catch:** our hero will only level up if you finish tasks assigned equally by all the gods.
 
-https://github.com/siddarth2810/Hades-Quest/Hades-Quest-Demo.webm
+[Hades-Quest-Demo.webm](https://github.com/siddarth2810/Hades-Quest/assets/110726331/9c076338-c538-42ae-9f72-0a645ce33352)
+
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
