@@ -25,24 +25,17 @@ const { connect } = require("http2");
 //connect to mongoose local HadesDB database
 // const mongodbURI = process.env.MONGODB_URI; 
 
-// async function connectDB() {
-//   await mongoose.connect( mongodbURI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     serverSelectionTimeoutMS: 50000,
-//   });
+async function connectDB() {
+  await mongoose.connect( mongodbURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 50000,
+  });
   
-// }
-// connectDB();
-
- async function connectDB() {
-await mongoose.connect("mongodb://localhost:27017/HadesDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 50000,
-});
-  }
+}
 connectDB();
+
+
 
 
 
