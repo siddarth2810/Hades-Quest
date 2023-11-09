@@ -23,7 +23,7 @@ const { type } = require("os");
 const { connect } = require("http2");
 
 //connect to mongoose local HadesDB database
-const mongodbURI = process.env.MONGODB_URI; 
+// const mongodbURI = process.env.MONGODB_URI; 
 
 // async function connectDB() {
 //   await mongoose.connect( mongodbURI, {
@@ -35,12 +35,14 @@ const mongodbURI = process.env.MONGODB_URI;
 // }
 // connectDB();
 
-mongoose.connect("mongodb://localhost:27017/HadesDB", {
+ async function connectDB() {
+await mongoose.connect("mongodb://localhost:27017/HadesDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverSelectionTimeoutMS: 50000,
 });
-
+  }
+connectDB();
 
 
 
