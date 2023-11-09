@@ -318,6 +318,6 @@ app.post("/increaseProgressAndDelete2", async (req, res) => {
   );
 
 //listen to port 8001
-app.listen(8001, () => {
+app.listen( process.env.PORT || 8001, () => {
   console.log("Server is running on port 8001");
 });
